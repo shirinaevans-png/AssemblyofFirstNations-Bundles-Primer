@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>AFN Panel 13 Response Training - Primer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="startOverlay" class="overlay">
+    <div class="start-card" role="dialog" aria-modal="true" aria-labelledby="startTitle">
+      <h1 id="startTitle">AFN Panel 13 Response Training</h1>
+      <p>Introduction Primer and Living Bundle Framework</p>
+      <button id="startBtn" class="primary">Start training</button>
+      <p class="small">Starting once allows narration and video to play automatically as you move through the course.</p>
+    </div>
+  </div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">AFN Panel 13 Response Training</div>
+        <div id="slideTitle" class="slide-title">Primer</div>
+      </div>
+      <div class="status-area">
+        <span id="slideCounter" aria-live="polite">1 / 19</span>
+        <button id="transcriptBtn" class="ghost" aria-expanded="false">Transcript</button>
+      </div>
+    </header>
+
+    <section class="stage-wrap">
+      <div id="stage" class="stage" tabindex="0" aria-label="Course slide">
+        <img id="slideImage" alt="" draggable="false" />
+        <video id="slideVideo" class="media-layer" controls playsinline preload="metadata" hidden></video>
+      </div>
+      <aside id="transcriptPanel" class="transcript" hidden>
+        <h2>Transcript</h2>
+        <div id="transcriptText"></div>
+      </aside>
+    </section>
+
+    <section id="interactionPanel" class="interaction-panel" hidden aria-live="polite"></section>
+
+    <footer class="controls">
+      <button id="backBtn" class="nav-btn">← Back</button>
+      <div class="media-controls">
+        <button id="replayBtn" class="ghost">Replay narration</button>
+        <button id="pauseBtn" class="ghost">Pause</button>
+      </div>
+      <button id="nextBtn" class="nav-btn primary">Next →</button>
+    </footer>
+
+    <div class="progress-track" aria-hidden="true">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+  </main>
+
+  <audio id="slideAudio" preload="auto"></audio>
+
+  <script src="scorm.js"></script>
+  <script src="course.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
